@@ -33,12 +33,12 @@ You still have full access to the AWS resources Beanstalk creates, but the heavy
   ```bash
   aws configure
   ```
-- EB CLI installed via pip (requires Python):
+- EB CLI installed via pip:
   ```bash
   pip install awsebcli
   ```
 
-  > If you don't have Python/pip, download it from https://www.python.org/downloads/
+  > Python 3.4+ comes with pip included — no separate install needed. Download Python from https://www.python.org/downloads/ if you don't have it.
 
 ---
 
@@ -155,10 +155,27 @@ eb deploy
 
 ## Cleaning Up
 
-To avoid ongoing charges, terminate the environment when done:
+To avoid ongoing charges, terminate your environment and delete the application when done.
+
+### Via the AWS Console
+
+1. Go to the [Elastic Beanstalk Console](https://console.aws.amazon.com/elasticbeanstalk)
+2. Select your application (e.g., `beanstalk-demo`)
+3. Click on your environment (e.g., `beanstalk-demo-env`)
+4. Click **Actions > Terminate environment** and confirm
+5. Once the environment is terminated, go back to the application page
+6. Click **Actions > Delete application** and confirm
+
+> Terminating the environment stops all EC2 instances and removes the load balancer. Deleting the application removes all associated environments and versions.
+
+### Via the EB CLI
 
 ```bash
 eb terminate beanstalk-demo-env
 ```
 
-Or delete the application entirely from the Elastic Beanstalk Console.
+To also delete the application and all its versions:
+
+```bash
+eb terminate --all
+```
