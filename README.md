@@ -35,8 +35,9 @@ You still have full access to the AWS resources Beanstalk creates, but the heavy
   ```
 - EB CLI installed via pip:
   ```bash
-  pip install awsebcli
+  pip install awsebcli --user
   ```
+  > The `--user` flag installs the EB CLI to your user directory instead of the system Python folder, avoiding permission errors on Windows. If you omit it and get an `[Errno 13] Permission denied` error, re-run the command with `--user`.
 
   > Python 3.4+ comes with pip included — no separate install needed. If you don't have Python, install it one of these ways:
   >
