@@ -38,7 +38,16 @@ You still have full access to the AWS resources Beanstalk creates, but the heavy
   pip install awsebcli
   ```
 
-  > Python 3.4+ comes with pip included — no separate install needed. Download Python from https://www.python.org/downloads/ if you don't have it.
+  > Python 3.4+ comes with pip included — no separate install needed. If you don't have Python, install it one of these ways:
+  >
+  > **Option A — Download from python.org:** https://www.python.org/downloads/
+  > During installation, make sure to check **"Add Python to PATH"**.
+  >
+  > **Option B — Install via Chocolatey in PowerShell (run as Administrator):**
+  > ```powershell
+  > choco install python
+  > ```
+  > This installs Python with pip included and automatically adds it to your PATH.
 
   **To verify Python and pip are installed, run these commands in Git Bash:**
   ```bash
