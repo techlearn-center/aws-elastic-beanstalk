@@ -39,6 +39,21 @@ You still have full access to the AWS resources Beanstalk creates, but the heavy
   ```
   > The `--user` flag installs the EB CLI to your user directory instead of the system Python folder, avoiding permission errors on Windows. If you omit it and get an `[Errno 13] Permission denied` error, re-run the command with `--user`.
 
+  **After installing with `--user`, you may see a warning like:**
+  ```
+  WARNING: The scripts eb.exe and ebp.exe are installed in
+  'C:\Users\<you>\AppData\Roaming\Python\Python312\Scripts'
+  which is not on PATH.
+  ```
+  This means the `eb` command won't work until you add that folder to your PATH. Run this in Git Bash to fix it permanently:
+  ```bash
+  echo 'export PATH="$PATH:/c/Users/<your-username>/AppData/Roaming/Python/Python312/Scripts"' >> ~/.bashrc && source ~/.bashrc
+  ```
+  Replace `<your-username>` with your actual Windows username. After running it, verify the EB CLI works:
+  ```bash
+  eb --version
+  ```
+
   > Python 3.4+ comes with pip included — no separate install needed. If you don't have Python, install it one of these ways:
   >
   > **Option A — Download from python.org:** https://www.python.org/downloads/
