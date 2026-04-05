@@ -33,19 +33,12 @@ You still have full access to the AWS resources Beanstalk creates, but the heavy
   ```bash
   aws configure
   ```
-- EB CLI installed (choose one method based on your setup):
-
-  **Using pip (Python):**
+- EB CLI installed via pip (requires Python):
   ```bash
   pip install awsebcli
   ```
 
-  **Using Chocolatey (Windows, if pip is not available):**
-  ```bash
-  choco install awsebcli
-  ```
-
-  > To install Chocolatey first, follow the instructions at https://chocolatey.org/install
+  > If you don't have Python/pip, download it from https://www.python.org/downloads/
 
 ---
 
