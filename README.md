@@ -40,6 +40,13 @@ You still have full access to the AWS resources Beanstalk creates, but the heavy
 
   > Python 3.4+ comes with pip included — no separate install needed. Download Python from https://www.python.org/downloads/ if you don't have it.
 
+  **To verify Python and pip are installed, run these commands in Git Bash:**
+  ```bash
+  python --version
+  pip --version
+  ```
+  You should see version numbers printed for both. If you get a `command not found` error, Python is not installed or not added to your PATH — reinstall Python from python.org and make sure to check **"Add Python to PATH"** during installation.
+
 ---
 
 ## Step 1: Clone the Repository
